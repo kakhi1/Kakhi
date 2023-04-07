@@ -7,9 +7,8 @@ module.exports = {
         textFont: ["Montserrat", "sans-serif"],
       },
       colors: {
-        bodyColor: "#B7B09Eff",
-        textColor: "#0E0E0Eff",
-        designColor: "#ECC73B",
+        brown: "#AB3E1D",
+        yellow: "#ECC73B",
       },
       keyframes: {
         wiggle: {
@@ -24,17 +23,39 @@ module.exports = {
             borderRight: "0px solid black",
           },
         },
+        rotateSnake: {
+          "0% 100% ": {
+            transform: "translateY(0px)",
+          },
+          "25%": {
+            transform: "translateY(500px) ",
+            
+          },
+          "50%": {
+            transform: "translateY(300px) ",
+          },
+        
+        },
+
         slide: {
-          "0%": { transform: "translateX(-800px)  " },
+          "0%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(80px)" },
+          "100%": { transform: "translateX(0px)" },
+        },
+        slideLeft: {
+          "0%": { transform: "translateX(200px)" },
           "100%": { transform: "translateX(0)" },
         },
       },
       animation: {
         wiggle: "wiggle 2s ease-in-out",
-        slide: "slide 6s ease-in-out ",
+        rotateSnake: "rotateSnake 20s ease-in-out infinite",
+        slide: "slide 10s ease-in-out infinite ",
+        slide1: "slide 2s ease-in-out ",
+        slideLeft: "slideLeft 1s ease-in-out ",
       },
     },
-    plugins: [require("tailwindcss-3d")],
+    plugins: [],
     modules: {},
   },
 };
