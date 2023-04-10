@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import About from "./components/About";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar.jsx";
 import Projects from "./components/Projects";
@@ -11,7 +12,8 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Projects />
+      <About />
+      {/* <Projects /> */}
       {/* <Home /> */}
     </div>
   );

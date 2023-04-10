@@ -11,7 +11,7 @@ const Projects = () => {
   };
    
   return (
-    <div className=" w-full  border-black  md:border-x-[6px] font-textFont">
+    <div className=" w-full  border-black  md:border-x-[6px] font-textFont " id="projects">
       {/* button animation */}
       <div className="w-full md:h-[70px] h-[40px] flex md:justify-start justify-center relative md:border-b-[6px] border-l-[6px] border-x-[3px] md:border-x-0 border-b-[3px] border-black bg-yellow md:bg-white ">
         <div className="md:animate-wiggle flex items-center justify-start ">
