@@ -14,41 +14,43 @@ const About = () => {
     <div className="md:w-full max-h-[944px] border-black border-b-[6px] bg-white">
       <div
         className="w-full md:h-[70px] h-[40px] flex md:justify-start justify-center relative 
-      border-l-[6px] border-x-[3px] md:border-x-[6px] border-black bg-yello w md:bg-white "
+      md:border-l-[6px] border-x-[3px] md:border-x-[6px] border-black bg-yellow md:bg-white "
       >
-        <div className="md:animate-wiggle flex items-center justify-start ">
+        <div className="md:animate-wiggle flex items-center justify-start w-[10%]">
           <span
-            className="w-[150px] h-full  font-textFont flex justify-center items-center bg-[#ECC73b] italic md:border-r-[6px]  border-black text-[16px]
+            className=" w-full h-full font-textFont flex justify-center items-center bg-yellow md:italic md:border-r-[6px]  border-black text-[16px]
            cursor-pointer uppercase font-extrabold "
           >
             about
           </span>{" "}
         </div>
       </div>
-      <div className="w-full md:h-[874px] border-black border-[6px] flex md:flex-row flex-col">
+      <div className="w-full md:h-[874px] border-black md:border-[6px] border-[3px] flex md:flex-row flex-col">
         {/* first columm */}
-        <div className="h-full md:w-[10%] w-[0%] ">
+        <div className="h-full md:w-[12%] w-[0%] ">
           <div className="w-full h-[30%] bg-white"></div>
-          <div className="w-full h-[50%] bg-blue border-y-[6px] border-black"></div>
+          <div className="w-full h-[50%] bg-blue md:border-y-[6px]  border-black"></div>
           <div className="w-full h-[20%] bg-yellow"></div>
         </div>
         {/* second columm */}
-        <div className="h-full md:w-[35%] w-full  border-black border-x-[6px]">
-          <div className="w-full h-[15%] flex justify-center items-center">
-            <div className="flex flex-col text-left h-[60%] justify-center">
-              <span className="font-bold md:text-[20px] text-[16px] w-full">
+        <div className="h-full md:w-[40%] w-full  border-black md:border-x-[6px]">
+          <div className="md:h-[15%] h-10 flex justify-start items-center px-10 ">
+            <div className="flex md:flex-col flex-row text-left items-start h-[60%] md:justify-center lg:ml-3 ">
+              {" "}
+              <span className="font-bold md:text-[20px] text-[12px]">
                 Hi there!
               </span>
-              <span className="font-extrabold text-[16px] lg:text-[26px] w-full ">
-                My name is{" "}
-                <span className="text-red1 uppercase text-[16px] lg:text-[22px] lg:hover:text-[28px] duration-1000 cursor-pointer">
-                  {" "}
-                  Kakhi Mtchedluri{" "}
+              <div className="flex flex-row justify-start ">
+                <span className="md:font-extrabold font-bold md:text-[14px] text-[12px] text-left ml-3 md:ml-0 ">
+                  My name is{" "}
                 </span>
-              </span>
+                <div className=" text-red1 font-extrabold uppercase md:text-[16px] text-[12px] lg:hover:text-[20px] duration-1000 cursor-pointer ml-3">
+                  Kakhi Mtchedluri
+                </div>
+              </div>
             </div>
           </div>
-          <div className="w-full h-[41%] border-y-[6px] border-black flex items-center justify-center">
+          <div className="w-full h-[41%] md:border-y-[6px] border-y-[3px] border-black flex items-center justify-center">
             <div className="w-[80%] text-left font-medium h-full flex items-center ">
               <span>
                 I'm a self-taught web developer with a strong understanding of
@@ -109,14 +111,22 @@ const About = () => {
           </div>
         </div>
         {/* third columm */}
-        <div className="h-full md:w-[55%] w-full">
+        <div className="h-full md:w-[48%] w-full">
           <div className="w-full h-[10%] flex flex-row">
             <div className="w-[80%] h-full"></div>
             <div className="w-[20%] h-full bg-yellow border-black md:border-l-[6px] border-l-[3px]"></div>
           </div>
-          <div className="w-full h-[60%] bg-red1 border-y-[6px] border-black"></div>
+          <div className="w-full h-[60%] bg-red1 border-y-[6px] border-black">
+            <img
+              class="h-full max-w-full opacity-70"
+              src="./src/assets/photo.jpg"
+              alt="me"
+            />
+          </div>
           <div className="w-full h-[30%] flex flex-row">
-            <div className="w-[60%] h-full"></div>
+            <div className="w-[60%] h-full">
+              <div className="w-full"></div>
+            </div>
             <div className="w-[20%] h-full bg-blue md:border-x-[6px] border-x-[3px] border-black"></div>
             <div className="w-[20%] h-full"></div>
           </div>

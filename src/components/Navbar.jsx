@@ -50,7 +50,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="w-[50px] h-[50px] absolute right-0 visible md:invisible bg-blue-500 border-y-[3px] border-l-[3px] border-black"></div>
+      <div className="w-[50px] h-[50px] absolute right-0 visible md:invisible bg-blue  border-y-[3px] border-[3px] border-black"></div>
     </div>
   );
 };
