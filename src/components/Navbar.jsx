@@ -5,9 +5,9 @@ const Navbar = (props) => {
     <div className="flex flex-row md:justify-between justify-start items-center  w-full md:h-[80px] h-[50px] md:relative border-black   md:border-[6px] border-[3px]">
       <div className="md:w-[65%] w-[400px] h-full flex md:items-center justify-start md:relative md:border-r-[6px] border-black ml-4 ">
         <div className="w-[400px] flex items-start justify-start">
-          <span className="md:text-[28px] text-[20px]  font-bold font-textFont">
-            KAKHI MTCHEDLURI
-          </span>
+          <span className="md:text-[28px] text-[20px]  font-bold font-textFont uppercase">  
+              kakhi mtchedluri
+                  </span>
         </div>
       </div>
       <div className="w-[50%] h-[100px] ">

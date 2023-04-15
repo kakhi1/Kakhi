@@ -1,10 +1,10 @@
 import React from "react";
-import { AiFillHtml5, AiFillDatabase, AiFillGithub } from "react-icons/ai";
+import { AiFillHtml5, AiFillDatabase, AiFillGithub,AiFillInstagram,AiFillLinkedin } from "react-icons/ai";
 import {
   DiCss3,
   DiJavascript1,
   DiReact,
-  DiAngularSimple,
+  DiAngularSimple
 } from "react-icons/di";
 import { SiTailwindcss } from "react-icons/si";
 import { BsGit } from "react-icons/bs";
@@ -14,9 +14,9 @@ const About = () => {
   
   return (
 
-    <div className="md:w-full max-h-[944px] border-black border-b-[6px] bg-white " id="about">
+    <div className="md:w-full h-[860px] border-black border-b-[6px] bg-white " id="about">
       <div
-        className="w-full md:h-[70px] h-[40px] flex md:justify-start justify-center relative 
+        className="w-full md:h-[8%] h-[40px] flex md:justify-start justify-center relative 
       md:border-l-[6px] border-x-[3px] md:border-x-[6px] border-black bg-yellow md:bg-white "
       >
         <div className="md:animate-wiggle flex items-center justify-start w-[175px]">
@@ -28,7 +28,7 @@ const About = () => {
           </span>{" "}
         </div>
       </div>
-      <div className="w-full md:h-[874px] border-black md:border-[6px] border-[3px] flex md:flex-row flex-col">
+      <div className="w-full md:h-[92%] border-black md:border-b-0 md:border-[6px] border-[3px] flex md:flex-row flex-col">
         {/* first columm */}
         <div className="h-full md:w-[12%] w-[0%]">
           <div className="w-full h-[30%] bg-white"></div>
@@ -126,9 +126,22 @@ const About = () => {
               alt="me"
             />
           </div>
-          <div className="w-full h-[30%] flex flex-row">
-            <div className="w-[60%] h-full">
-              <div className="w-full"></div>
+          <div className="w-full h-[30%] flex flex-row justify-between relative">
+            <div className="md:w-[60%] w-full h-full">
+              <div className="w-full flex md:flex-col md:justify-center justify-end items-center gap-10 md:gap-0">
+                <div className="md:h-10 md:w-[60%] flex md:justify-around justify-around items-center md:m-10">
+                  <div className=" cursor-pointer group "> <AiFillInstagram size={30} color="red"/>
+                    <div className="hover:lg:w-40 hover:lg:h-60 w-7 h-7 invisible lg:visible absolute bottom-[160px] hover:m-6 border-[6px] border-black opacity-0 group-hover:opacity-100 duration-1000"></div>
+                  </div>
+                  <div className=" cursor-pointer group "><AiFillGithub size={30} color="black"/>
+                   <div className="hover:lg:w-40 hover:lg:h-60 w-7 h-7 invisible lg:visible absolute bottom-[160px] hover:m-6 border-[6px] border-black opacity-0 group-hover:opacity-100 duration-1000"></div></div>
+                  <div className=" cursor-pointer group"><AiFillLinkedin size={30} color="#045D97"/>
+                   <div className="hover:lg:w-40 hover:lg:h-60 md:w-7 md:h-7 invisible lg:visible absolute bottom-[160px] hover:m-6 border-[6px] border-black opacity-0 group-hover:opacity-100 duration-1000"></div></div>
+                </div>
+                <div className="md:w-[60%]  md:h-10 font-medium">
+                  Download CV
+                </div>
+              </div>
             </div>
             <div className="w-[20%] h-full bg-blue md:border-x-[6px] border-x-[3px] border-black"></div>
             <div className="w-[20%] h-full"></div>

@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        textFont: ["Montserrat", "sans-serif"],
+        textFont: ["Josefin Sans", "sans-serif"],
       },
       colors: {
         red1: "#CD190A",
@@ -60,6 +61,14 @@ module.exports = {
           "0%": { transform: "translateX(100px)" },
           "100%": { transform: "translateX(0)" },
         },
+        scrollbarr: {
+          "0% ": { transform: "0" },
+          "100%": { transform: "translateX(30px)" },
+        },
+        scrollbarrL: {
+          "0% ": { transform: "0" },
+          "100%": { transform: "translateX(-30px)" },
+        },
       },
       animation: {
         wiggle: "wiggle 2s ease-in-out",
@@ -67,9 +76,11 @@ module.exports = {
         slide: "slide 10s ease-in-out infinite ",
         slide1: "slide 5s ease-in-out infinite",
         slideLeft: "slideLeft 3s ease-in-out ",
+        scrollbarr: 'scrollbarr 400ms ease-in-out',
+        scrollbarrL: 'scrollbarrL 400ms ease-in-out'
       },
     },
-    plugins: [],
+    plugins: [require('tailwind-scrollbar-hide')],
     modules: {},
   },
 };
