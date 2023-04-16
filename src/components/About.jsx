@@ -8,13 +8,14 @@ import {
 } from "react-icons/di";
 import { SiTailwindcss } from "react-icons/si";
 import { BsGit } from "react-icons/bs";
+import { resume } from "../assets";
 
 const About = () => {
   
   
   return (
 
-    <div className="md:w-full h-[860px] border-black border-b-[6px] bg-white " id="about">
+    <div className="md:w-full md:h-[860px] border-black md:border-b-[6px] bg-white " id="about">
       <div
         className="w-full md:h-[8%] h-[40px] flex md:justify-start justify-center relative 
       md:border-l-[6px] border-x-[3px] md:border-x-[6px] border-black bg-yellow md:bg-white "
@@ -24,7 +25,7 @@ const About = () => {
             className=" w-full h-full font-textFont flex justify-center items-center bg-yellow md:italic md:border-r-[6px]  border-black text-[16px]
            cursor-pointer uppercase font-extrabold "
           >
-            about
+            about me
           </span>{" "}
         </div>
       </div>
@@ -130,20 +131,29 @@ const About = () => {
             <div className="md:w-[60%] w-full h-full">
               <div className="w-full flex md:flex-col md:justify-center justify-end items-center gap-10 md:gap-0">
                 <div className="md:h-10 md:w-[60%] flex md:justify-around justify-around items-center md:m-10">
-                  <div className=" cursor-pointer group "> <AiFillInstagram size={30} color="red"/>
-                    <div className="hover:lg:w-40 hover:lg:h-60 w-7 h-7 invisible lg:visible absolute bottom-[160px] hover:m-6 border-[6px] border-black opacity-0 group-hover:opacity-100 duration-1000"></div>
+                  <div className=" cursor-pointer group "><a
+                                                       href="https://www.instagram.com"
+                                                       target="_blank"
+                  >
+                    <AiFillInstagram  className="hover:animate-spin duration-100" size={30} color="red"/></a>
                   </div>
-                  <div className=" cursor-pointer group "><AiFillGithub size={30} color="black"/>
-                   <div className="hover:lg:w-40 hover:lg:h-60 w-7 h-7 invisible lg:visible absolute bottom-[160px] hover:m-6 border-[6px] border-black opacity-0 group-hover:opacity-100 duration-1000"></div></div>
-                  <div className=" cursor-pointer group"><AiFillLinkedin size={30} color="#045D97"/>
-                   <div className="hover:lg:w-40 hover:lg:h-60 md:w-7 md:h-7 invisible lg:visible absolute bottom-[160px] hover:m-6 border-[6px] border-black opacity-0 group-hover:opacity-100 duration-1000"></div></div>
+                  <div className=" cursor-pointer group "> <a
+                                                      href="https://github.com/kakhi1"
+                                                      target="_blank" >
+                    <AiFillGithub className="hover:animate-spin duration-100"  size={30} color="black"  /> </a></div>
+                  <div className=" cursor-pointer group">  <a
+                                                      href="www.linkedin.com/in/kakhi-mtchedluri-115950191"
+                                                      target="_blank" > 
+                    <AiFillLinkedin className="hover:animate-spin duration-100" size={30} color="#045D97"/> </a></div>
                 </div>
                 <div className="md:w-[60%]  md:h-10 font-medium">
-                  Download CV
+                 <a  href={resume}
+                     target="_blank"
+                     rel="noreferrer"><button>Download CV</button></a>  
                 </div>
               </div>
             </div>
-            <div className="w-[20%] h-full bg-blue md:border-x-[6px] border-x-[3px] border-black"></div>
+            <div className="w-[20%] h-full bg-red1 md:border-x-[6px] border-x-[3px] border-black"></div>
             <div className="w-[20%] h-full"></div>
           </div>
         </div>
