@@ -1,9 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        project1: "url(./assets/project1.PNG)",
+        project12: "url(./assets/project1-2.PNG)",
+        project2: "url(./assets/project2.PNG)",
+        project22: "url(./assets/project2-2.PNG)",
+        project3: "url(./assets/project3.PNG)",
+        project32: "url(./assets/project3-2.PNG)",
+        project4: "url(./assets/project4.PNG)",
+        project42: "url(./assets/project4-2.PNG)",
+      },
       fontFamily: {
         textFont: ["Josefin Sans", "sans-serif"],
       },
@@ -76,11 +85,11 @@ module.exports = {
         slide: "slide 10s ease-in-out infinite ",
         slide1: "slide 5s ease-in-out infinite",
         slideLeft: "slideLeft 3s ease-in-out ",
-        scrollbarr: 'scrollbarr 400ms ease-in-out',
-        scrollbarrL: 'scrollbarrL 400ms ease-in-out'
+        scrollbarr: "scrollbarr 400ms ease-in-out",
+        scrollbarrL: "scrollbarrL 400ms ease-in-out",
       },
     },
-    plugins: [require('tailwind-scrollbar-hide')],
+    plugins: [],
     modules: {},
   },
 };

@@ -1,21 +1,27 @@
 import React from "react";
-import { AiFillHtml5, AiFillDatabase, AiFillGithub,AiFillInstagram,AiFillLinkedin } from "react-icons/ai";
+import {
+  AiFillHtml5,
+  AiFillDatabase,
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillLinkedin,
+} from "react-icons/ai";
 import {
   DiCss3,
   DiJavascript1,
   DiReact,
-  DiAngularSimple
+  DiAngularSimple,
 } from "react-icons/di";
 import { SiTailwindcss } from "react-icons/si";
 import { BsGit } from "react-icons/bs";
 import { resume } from "../assets";
 
 const About = () => {
-  
-  
   return (
-
-    <div className="md:w-full md:h-[860px] border-black md:border-b-[6px] bg-white " id="about">
+    <div
+      className="md:w-full md:h-[860px] border-black md:border-b-[6px] bg-white "
+      id="about"
+    >
       <div
         className="w-full md:h-[8%] h-[40px] flex md:justify-start justify-center relative 
       md:border-l-[6px] border-x-[3px] md:border-x-[6px] border-black bg-yellow md:bg-white "
@@ -55,7 +61,7 @@ const About = () => {
             </div>
           </div>
           <div className="w-full  h-[41%] md:border-y-[6px] border-y-[3px] border-black flex items-center justify-start px-5 lg:px-10">
-            <div className="w-[80%] text-left font-medium h-full  flex items-center ">
+            <div className="md:w-[80%]  text-left font-medium h-full  flex items-center ">
               <span>
                 I'm a self-taught web developer with a strong understanding of
                 HTML, CSS, JavaScript, React, Tailwind CSS, and Angular. I have
@@ -131,25 +137,46 @@ const About = () => {
             <div className="md:w-[60%] w-full h-full">
               <div className="w-full flex md:flex-col md:justify-center justify-end items-center gap-10 md:gap-0">
                 <div className="md:h-10 md:w-[60%] flex md:justify-around justify-around items-center md:m-10">
-                  <div className=" cursor-pointer group "><a
-                                                       href="https://www.instagram.com"
-                                                       target="_blank"
-                  >
-                    <AiFillInstagram  className="hover:animate-spin duration-100" size={30} color="red"/></a>
+                  <div className=" cursor-pointer group ">
+                    <a
+                      href="https://www.instagram.com/kakhi_mtchedluri/"
+                      target="_blank"
+                    >
+                      <AiFillInstagram
+                        className="lg:hover:animate-spin duration-100"
+                        size={30}
+                        color="red"
+                      />
+                    </a>
                   </div>
-                  <div className=" cursor-pointer group "> <a
-                                                      href="https://github.com/kakhi1"
-                                                      target="_blank" >
-                    <AiFillGithub className="hover:animate-spin duration-100"  size={30} color="black"  /> </a></div>
-                  <div className=" cursor-pointer group">  <a
-                                                      href="www.linkedin.com/in/kakhi-mtchedluri-115950191"
-                                                      target="_blank" > 
-                    <AiFillLinkedin className="hover:animate-spin duration-100" size={30} color="#045D97"/> </a></div>
+                  <div className=" cursor-pointer group ">
+                    {" "}
+                    <a href="https://github.com/kakhi1" target="_blank">
+                      <AiFillGithub
+                        className="lg:hover:animate-spin duration-100"
+                        size={30}
+                        color="black"
+                      />{" "}
+                    </a>
+                  </div>
+                  <div className=" cursor-pointer group">
+                    {" "}
+                    <a
+                      href="https://www.linkedin.com/in/kakhi-mtchedluri-115950191"
+                      target="_blank"
+                    >
+                      <AiFillLinkedin
+                        className="lg:hover:animate-spin duration-100"
+                        size={30}
+                        color="#045D97"
+                      />{" "}
+                    </a>
+                  </div>
                 </div>
                 <div className="md:w-[60%]  md:h-10 font-medium">
-                 <a  href={resume}
-                     target="_blank"
-                     rel="noreferrer"><button>Download CV</button></a>  
+                  <a href={resume} target="_blank" rel="noreferrer">
+                    <button>Download CV</button>
+                  </a>
                 </div>
               </div>
             </div>
