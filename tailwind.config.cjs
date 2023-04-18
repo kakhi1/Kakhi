@@ -35,25 +35,14 @@ module.exports = {
             borderRight: "0px solid black",
           },
         },
-        rotateSnake: {
-          "0% 100% ": {
-            transform: "translateY(0px)",
+        increase: {
+          "0%": {
+            width: "15%",
+            height: "26%",
           },
-          "25%": {
-            transform: "translateY(500px) ",
-          },
-          "50%": {
-            transform: "translateY(300px) ",
-          },
-        },
-        size: {
-          "0% 100%": {
-            width: "50px",
-            height: "50px",
-          },
-          "50%": {
-            width: "40px",
-            height: "40px",
+          "100% %": {
+            width: "100%",
+            height: "100%",
           },
         },
 
@@ -81,10 +70,9 @@ module.exports = {
       },
       animation: {
         wiggle: "wiggle 2s ease-in-out",
-        rotateSnake: "rotateSnake 20s ease-in-out infinite",
-        slide: "slide 10s ease-in-out infinite ",
+        increase: "increase 1s ease-in-out infinite ",
         slide1: "slide 5s ease-in-out infinite",
-        slideLeft: "slideLeft 3s ease-in-out ",
+        slideLeft: "slideLeft 3s ease-in-out infinite ",
         scrollbarr: "scrollbarr 400ms ease-in-out",
         scrollbarrL: "scrollbarrL 400ms ease-in-out",
       },
