@@ -4,14 +4,14 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        project1: "url(./assets/project1.PNG)",
-        project12: "url(./assets/project1-2.PNG)",
-        project2: "url(./assets/project2.PNG)",
-        project22: "url(./assets/project2-2.PNG)",
-        project3: "url(./assets/project3.PNG)",
-        project32: "url(./assets/project3-2.PNG)",
-        project4: "url(./assets/project4.PNG)",
-        project42: "url(./assets/project4-2.PNG)",
+        project1: "url(./assets/project1.png)",
+        project12: "url(./assets/project1-2.png)",
+        project2: "url(./assets/project2.png)",
+        project22: "url(./assets/project2-2.png)",
+        project3: "url(./assets/project3.png)",
+        project32: "url(./assets/project3-2.png)",
+        project4: "url(./assets/project4.png)",
+        project42: "url(./assets/project4-2.png)",
       },
       fontFamily: {
         textFont: ["Josefin Sans", "sans-serif"],
