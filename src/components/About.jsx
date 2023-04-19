@@ -126,9 +126,9 @@ const About = () => {
             <div className="w-[80%] h-full"></div>
             <div className="w-[20%] h-full bg-yellow border-black md:border-l-[6px] border-l-[3px]"></div>
           </div>
-          <div className="w-full h-[60%] bg-red1 border-y-[6px] border-black">
+          <div className="w-full h-[60%] bg-red1 border-y-[6px] border-black flex justify-start items-start">
             <img
-              class="h-full max-w-full opacity-70"
+              className="max-h-full max-w-full border-black lg:border-r-[6px] border-6-[0px] md:border-b-[6px] lg:border-b-[0px]"
               src="./src/assets/photo.jpg"
               alt="me"
             />
@@ -180,7 +180,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[20%] h-full bg-red1 md:border-x-[6px] border-x-[3px] border-black"></div>
+            <div className="w-[20%] h-full md:border-l-[6px] border-l-[3px] border-black"></div>
             <div className="w-[20%] h-full"></div>
           </div>
         </div>
