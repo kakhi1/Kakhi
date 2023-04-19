@@ -15,6 +15,7 @@ import {
 import { SiTailwindcss } from "react-icons/si";
 import { BsGit } from "react-icons/bs";
 import { resume } from "../assets";
+import { photo } from "../assets";
 
 const About = () => {
   return (
@@ -129,7 +130,7 @@ const About = () => {
           <div className="w-full h-[60%] bg-red1 border-y-[6px] border-black flex justify-start items-start">
             <img
               className="max-h-full max-w-full border-black lg:border-r-[6px] border-6-[0px] md:border-b-[6px] lg:border-b-[0px]"
-              src="./src/assets/photo.jpg"
+              src={photo}
               alt="me"
             />
           </div>

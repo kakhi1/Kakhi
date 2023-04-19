@@ -206,7 +206,7 @@ const Contact = () => {
               />
             </div>
             <h1
-              className={`uppercase lg:text-3xl md:text-2xl text-3xl font-semibold font-textFont lg:p-10 p-5  ${
+              className={`uppercase lg:text-3xl md:text-2xl text-2xl font-semibold font-textFont lg:p-10 p-5  ${
                 isClikedM
                   ? "md:-translate-y-[300px] -translate-y-[325px]  duration-1000"
                   : "animate-textdown"
