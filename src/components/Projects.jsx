@@ -10,11 +10,11 @@ const Projects = () => {
   const [isClickedR, setIsClickedR] = useState(false);
   return (
     <div
-      className=" w-full border-black  md:border-x-[6px] font-textFont "
+      className=" w-full border-black  md:border-x-[6px] font-textFont bg-white1"
       id="projects"
     >
       {/* button animation */}
-      <div className="w-full md:h-[70px] h-[40px] flex md:justify-start justify-center relative md:border-b-[6px]  border-x-[3px] md:border-x-0 border-b-[3px] border-black bg-yellow md:bg-white ">
+      <div className="w-full md:h-[70px] h-[40px] flex md:justify-start justify-center relative md:border-b-[6px]  border-x-[3px] md:border-x-0 border-b-[3px] border-black bg-yellow md:bg-white1 ">
         <div className="md:animate-wiggle flex items-center justify-start  ">
           <span
             className="w-[150px] h-full  font-textFont flex justify-center items-center bg-yellow  md:italic md:border-r-[6px]  border-black text-[16px]

@@ -1,27 +1,98 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsArrowUpLeft } from "react-icons/bs";
+import axios from "axios";
 
 const Contact = () => {
+  const [isClikedM, setIsClickedM] = useState(false);
+
+  const [clientName, setClientName] = useState("");
+  const [email, setEmail] = useState("");
+  const [messages, setMessages] = useState("");
+  //  ==========error message
+  const [errClientName, setErrClientName] = useState(false);
+  const [errEmail, setErrEmail] = useState(false);
+  const [errMessages, setErrMessages] = useState(false);
+  const [succesMsg, setSuccesMsg] = useState("");
+
+  // ==========  email validation
+  const EmailValidation = (email) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  };
+  // email validate
+  const handleName = (e) => {
+    setClientName(e.target.value);
+    setErrClientName(false);
+  };
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+    setErrEmail(false);
+  };
+  const handleMessages = (e) => {
+    setMessages(e.target.value);
+    setErrMessages(false);
+  };
+  const handleSend = (e) => {
+    e.preventDefault();
+    if (!clientName) {
+      setErrClientName(true);
+    }
+    if (!email) {
+      setErrEmail(true);
+    } else {
+      if (!EmailValidation(email)) {
+        setErrEmail(true);
+      }
+    }
+    if (!messages) {
+      setErrMessages(true);
+    }
+    if (clientName && email && EmailValidation(email) && messages) {
+      axios.post("https://getform.io/f/7a0928b0-ae02-4e9d-8a4f-b955fe8ec5ba", {
+        name: clientName,
+        email: email,
+        message: messages,
+      });
+      setSuccesMsg(
+        "hello,your messages has been sent successfully.Thank you for your time!"
+      );
+      setClientName("");
+      setEmail("");
+      setMessages("");
+    }
+  };
+
   return (
     <div
       id="contact"
-      className="md:w-full md:h-[800px] border-black md:border-x-[6px] md:border-b-[6px] bg-white1 "
+      className="md:w-full md:h-[780px] border-black md:border-x-[6px] md:border-b-[6px] bg-white1 "
     >
       {/* contact button */}
-      <div className="md:animate-wiggle flex items-center justify-start w-[175px] h-20">
-        <span
-          className=" w-full h-full font-textFont flex justify-start items-center bg-yellow
-           md:italic text-[16px] cursor-pointer uppercase font-extrabold border-black border-r-[6px] pl-10"
-        >
-          contact me{" "}
-        </span>{" "}
+      <div
+        className="w-full md:h-[8%] h-[40px] flex md:justify-start justify-center relative 
+       border-black bg-yellow md:bg-white1 border-x-[3px] md:border-x-0"
+      >
+        <div className="md:animate-wiggle flex items-center  justify-start w-[175px] h-full">
+          <span
+            className=" w-full h-full font-textFont flex justify-start items-center bg-yellow
+           md:italic text-[16px] cursor-pointer uppercase font-extrabold border-black md:border-r-[6px] md:pl-10 "
+          >
+            contact me{" "}
+          </span>{" "}
+        </div>
       </div>
       {/* contact body */}
-      <div className="w-full h-[720px] border-black border-y-[6px] flex items-center justify-start relative ">
+      <div
+        className="w-full md:h-[720px] h-[700px] border-black md:border-y-[6px] border-t-[3px] border-l-[3px] md:border-l-0 flex md:flex-row flex-col items-center
+       justify-start relative "
+      >
         {/* first columm */}
-        <div className="w-[35%] h-full border-r-[6px] border-black  font-textFont">
+        <div
+          className="md:w-[35%] md:h-full h-[40%]  md:border-r-[6px] border-r-[3px] w-full border-black flex md:flex-col 
+          items-center justify-center font-textFont"
+        >
           <div className="w-full h-[45%] bg-white1 ">
-            <div className="p-10 h-full w-full flex  flex-col  justify-center">
+            <div className="md:p-10 p-5 h-full w-full flex  flex-col  justify-center">
               <p className="flex justify-between font-semibold  ">
                 <span className="font-bold">Adress:</span> Georgia, Rustavi
               </p>
@@ -36,45 +107,123 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          <div className="w-full h-[40%] bg-blue border-black border-y-[6px]"></div>
-          <div className="w-full h-[15%] flex">
-            <div className="w-1/3 bg-white1 h-full"></div>
-            <div className="w-2/3 bg-yellow h-full border-black border-l-[6px]"></div>
+          <div className="md:w-full w-0  md:h-[40%] h-0 bg-blue border-black  md:border-y-[6px]"></div>
+          <div className="md:w-full w-0 md:h-[15%] h-0 flex">
+            <div className="w-1/3  bg-yellow h-full"></div>
+            <div className="w-2/3 bg-white1  h-full border-black border-l-[6px]"></div>
           </div>
         </div>
         {/* second columm */}
-        <div className="w-[50%] h-full ">
-          <div className="w-full h-[15%]">
-            <div className="w-1/3 h-full border-black border-r-[6px] bg-red1"></div>
+        <div className="md:w-[50%] w-full md:h-full h-[60%] ">
+          <div className="md:w-full w-0 md:h-[15%] h-0">
+            <div className="w-1/3 h-full border-black md:border-r-[6px]  bg-red1"></div>
             <div className="w-2/3 h-full"></div>
           </div>
           <div
-            className="w-full h-[60%]  bg-white1 border-black border-y-[6px] 
-              border-r-[6px] shadow-lg shadow-black relative flex items-end justify-start "
+            className="w-full md:h-[60%] h-full  bg-white1 border-black md:border-y-[6px]  border-y-[3px]
+              md:border-r-[6px] border-r-[3px] md:shadow-lg md:shadow-black relative flex items-end justify-start "
           >
+            {/* before send message form */}
             <div
-              className="w-[100%] h-[100%]  bg-yellow absolute bottom-0 right-0
-              border-black md:border-l-[6px] md:border-t-[6px] flex items-end justify-end ate-increase"
+              style={{ animationFillMode: isClikedM ? "forwards" : "none" }}
+              className={`md:w-[120px] lg:h-[120px] h-[80px] w-[80px]  bg-yellow absolute bottom-0 right-0
+              border-black md:border-l-[6px] border-l-[3px]  md:border-t-[6px] border-t-[3px] flex items-end justify-end  ${
+                isClikedM ? "animate-increase" : "animate-decrease"
+              }`}
             >
+              {/* send message form */}{" "}
+              {isClikedM && (
+                <div
+                  className={`w-[80%] h-[80%] absolute flex md:left-10 left-5 top-[100px] font-textFont ${
+                    isClikedM ? "animate-opacity" : ""
+                  }`}
+                >
+                  {" "}
+                  {succesMsg ? (
+                    <p className="text-center text-base font-titleFont p-20 ">
+                      {succesMsg}
+                    </p>
+                  ) : (
+                    <form
+                      className="w-[80%] h-[80]"
+                      id="form"
+                      action="https://getform.io/f/7a0928b0-ae02-4e9d-8a4f-b955fe8ec5ba"
+                      method="POST"
+                    >
+                      <div className=" flex md:flex-row flex-col text-sm gap-2 w-full ">
+                        <input
+                          onChange={handleName}
+                          value={clientName}
+                          type="text "
+                          placeholder="Full Name"
+                          className={`${
+                            errClientName
+                              ? "border-red1 focus-visible:border-red1"
+                              : "border-black focus-visible:border-black"
+                          } border-2 border-black outline-none bg-white1 w-full md:w-[50%]`}
+                        />
+                        <input
+                          onChange={handleEmail}
+                          value={email}
+                          type="Email "
+                          placeholder="Email Address"
+                          className={`${
+                            errEmail
+                              ? "border-red1 focus-visible:border-red1"
+                              : "border-black focus-visible:border-black"
+                          } border-2 border-black outline-none bg-white1 w-full md:w-[50%]`}
+                        />
+                      </div>
+                      <div className="w-full flex flex-col items-start my-1">
+                        <textarea
+                          onChange={handleMessages}
+                          value={messages}
+                          className={`${
+                            errMessages
+                              ? "border-red1 focus-visible:border-red1"
+                              : "border-black focus-visible:border-black"
+                          } border-2 border-black outline-none font-semibold w-full bg-white1`}
+                          cols="15"
+                          rows="4"
+                          placeholder="Your message"
+                        ></textarea>
+                        <button onClick={handleSend} className="my-1">
+                          Send Message
+                        </button>
+                      </div>
+                    </form>
+                  )}
+                </div>
+              )}
               <BsArrowUpLeft
                 color="#CD190A"
                 size={60}
-                className="lg:hover:-translate-x-8 lg:hover:-translate-y-9 duration-300 "
+                className={`lg:m-5 lg:hover:-translate-x-6 lg:hover:-translate-y-7 duration-300 ${
+                  isClikedM ? "animate-arowwRotate " : "animate-arowwRotate2"
+                }`}
+                onClick={() => setIsClickedM(!isClikedM)}
+                style={{ animationFillMode: isClikedM ? "forwards" : "none" }}
               />
             </div>
-            <h1 className="uppercase text-5xl font-semibold font-textFont p-10 ">
+            <h1
+              className={`uppercase lg:text-3xl md:text-2xl text-3xl font-semibold font-textFont lg:p-10 p-5  ${
+                isClikedM
+                  ? "md:-translate-y-[300px] -translate-y-[325px]  duration-1000"
+                  : "animate-textdown"
+              } `}
+            >
               Send Messages
             </h1>
           </div>
-          <div className="w-full h-[25%]">
-            <div className="w-[85%] h-full border-black border-r-[6px] bg-red1"></div>
+          <div className="md:w-full w-0 md:h-[25%] h-0">
+            <div className="w-[85%] h-full border-black md:border-r-[6px] bg-red1"></div>
             <div className="w-[15%] h-full"></div>
           </div>
         </div>
         {/* third columm */}
-        <div className="w-[20%] h-full">
+        <div className="md:w-[20%] w-0 md:h-full h-0">
           <div className="w-full h-[20%]"></div>
-          <div className="w-full h-[40%] bg-white1 border-black border-y-[6px]"></div>
+          <div className="w-full h-[40%] bg-white1 border-black md:border-y-[6px]"></div>
           <div className="w-full h-[40%]"></div>
         </div>
       </div>

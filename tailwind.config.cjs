@@ -37,13 +37,40 @@ module.exports = {
         },
         increase: {
           "0%": {
-            width: "15%",
-            height: "26%",
+            width: "120px",
+            height: "120px",
           },
-          "100% %": {
+          "100%": {
             width: "100%",
             height: "100%",
+            border: "0px solid black ",
           },
+        },
+        NavInc: {
+          "0%": {
+            width: "50px",
+            height: "50px",
+          },
+          "100%": {
+            width: "120px",
+            height: "150px",
+          },
+        },
+        decrease: {
+          "0%": {
+            width: "100%",
+            height: "100%",
+            border: "0px solid black",
+          },
+          "100%": {
+            width: "120px",
+            height: "120px",
+          },
+        },
+
+        opacity: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "100" },
         },
 
         slide: {
@@ -56,8 +83,36 @@ module.exports = {
           },
         },
         slideLeft: {
-          "0%": { transform: "translateX(100px)" },
+          "0%": { transform: "translatey(100px)" },
           "100%": { transform: "translateX(0)" },
+        },
+        textdown: {
+          "0%": { transform: "translateY(-300px)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        arowwRotate: {
+          "0%": {
+            transform: "translateY(-24px) translateX(-24px) rotate(0deg)",
+          },
+          "100%": {
+            transform: "translateY(-24px) translateX(-24px) rotate(180deg)",
+          },
+        },
+        arowwRotate2: {
+          "0%": {
+            transform: "translateY(-20px) translateX(-20px) rotate(180deg)",
+          },
+          "100%": {
+            transform: " translateY(0) translateX(0) rotate(0deg)",
+          },
+        },
+        NavRotate: {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(90deg)",
+          },
         },
         scrollbarr: {
           "0% ": { transform: "0" },
@@ -70,7 +125,14 @@ module.exports = {
       },
       animation: {
         wiggle: "wiggle 2s ease-in-out",
-        increase: "increase 1s ease-in-out infinite ",
+        increase: "increase 1s ease-in-out",
+        NavInc: "NavInc 50ms ease-in-out",
+        decrease: "decrease 1.2s ease-in-out",
+        arowwRotate: "arowwRotate 1s ease-in-out ",
+        arowwRotate2: "arowwRotate2 1s ease-in-out ",
+        NavRotate: "NavRotate 1s ease-in-out",
+        textdown: "textdown 1s ease-in-out",
+        opacity: "opacity 5s ease-in-out ",
         slide1: "slide 5s ease-in-out infinite",
         slideLeft: "slideLeft 3s ease-in-out infinite ",
         scrollbarr: "scrollbarr 400ms ease-in-out",

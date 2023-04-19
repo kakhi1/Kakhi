@@ -19,12 +19,12 @@ import { resume } from "../assets";
 const About = () => {
   return (
     <div
-      className="md:w-full md:h-[860px] border-black md:border-b-[6px] bg-white "
+      className="md:w-full md:h-[860px] border-black md:border-b-[6px] bg-white1 "
       id="about"
     >
       <div
         className="w-full md:h-[8%] h-[40px] flex md:justify-start justify-center relative 
-      md:border-l-[6px] border-x-[3px] md:border-x-[6px] border-black bg-yellow md:bg-white "
+      md:border-l-[6px] border-x-[3px] md:border-x-[6px] border-black bg-yellow md:bg-white1 "
       >
         <div className="md:animate-wiggle flex items-center justify-start w-[175px]">
           <span
@@ -38,7 +38,7 @@ const About = () => {
       <div className="w-full md:h-[92%] border-black md:border-b-0 md:border-[6px] border-[3px] flex md:flex-row flex-col">
         {/* first columm */}
         <div className="h-full md:w-[12%] w-[0%]">
-          <div className="w-full h-[30%] bg-white"></div>
+          <div className="w-full h-[30%] bg-white1"></div>
           <div className="w-full h-[50%] bg-blue md:border-y-[6px]  border-black"></div>
           <div className="w-full h-[20%] bg-yellow"></div>
         </div>
