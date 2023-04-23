@@ -1,17 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       backgroundImage: {
         project1: "url(./assets/project1.png)",
-        project12: "url(./assets/project1-2.png)",
-        project2: "url(./assets/project2.png)",
-        project22: "url(./assets/project2-2.png)",
-        project3: "url(./assets/project3.png)",
-        project32: "url(./assets/project3-2.png)",
-        project4: "url(./assets/project4.png)",
-        project42: "url(./assets/project4-2.png)",
+        project12: "url(./assets/project1-2.PNG)",
+        project2: "url(./assets/project2.PNG)",
+        project22: "url(./assets/project2-2.PNG)",
+        project3: "url(./assets/project3.PNG)",
+        project32: "url(./assets/project3-2.PNG)",
+        project4: "url(./assets/project4.PNG)",
+        project42: "url(./assets/project4-2.PNG)",
       },
       fontFamily: {
         textFont: ["Josefin Sans", "sans-serif"],
@@ -21,6 +22,7 @@ module.exports = {
         yellow: "#EACF5E",
         blue: "#045D97",
         white1: "#F5F5F5",
+        darkMode: "#171314",
       },
       keyframes: {
         wiggle: {
@@ -83,8 +85,17 @@ module.exports = {
           },
         },
         slideLeft: {
-          "0%": { transform: "translatey(100px)" },
-          "100%": { transform: "translateX(0)" },
+          "0%": { transform: "translatex(0)" },
+          "100%": {
+            transform: "translatex(-22px)",
+            backgroundColor: "#F5F5F5",
+          },
+        },
+        slideRight: {
+          "0%": { transform: "translatex(-22px)", backgroundColor: "#F5F5F5" },
+          "100%": {
+            transform: "translatex()",
+          },
         },
         textdown: {
           "0%": { transform: "translateY(-300px)" },
@@ -134,7 +145,8 @@ module.exports = {
         textdown: "textdown 1s ease-in-out",
         opacity: "opacity 5s ease-in-out ",
         slide1: "slide 5s ease-in-out infinite",
-        slideLeft: "slideLeft 3s ease-in-out infinite ",
+        slideLeft: "slideLeft 1s ease-in-out",
+        slideRight: "slideRight 1s ease-in-out  ",
         scrollbarr: "scrollbarr 400ms ease-in-out",
         scrollbarrL: "scrollbarrL 400ms ease-in-out",
       },

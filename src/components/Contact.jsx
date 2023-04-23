@@ -65,17 +65,17 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="md:w-full md:h-[780px] border-black md:border-x-[6px] md:border-b-[6px] bg-white1 "
+      className="md:w-full md:h-[780px] border-black dark:border-white1 dark:text-white1 md:border-x-[6px] md:border-b-[6px] bg-white1 dark:bg-darkMode "
     >
       {/* contact button */}
       <div
         className="w-full md:h-[8%] h-[40px] flex md:justify-start justify-center relative 
-       border-black bg-yellow md:bg-white1 border-x-[3px] md:border-x-0"
+       border-black dark:border-white1 bg-yellow md:bg-white1 dark:md:bg-darkMode   border-x-[3px] md:border-x-0"
       >
         <div className="md:animate-wiggle flex items-center  justify-start w-[175px] h-full">
           <span
             className=" w-full h-full font-textFont flex justify-start items-center bg-yellow
-           md:italic text-[16px] cursor-pointer uppercase font-extrabold border-black md:border-r-[6px] md:pl-10 "
+            text-[16px] cursor-pointer uppercase font-extrabold border-black dark:border-white1 md:border-r-[6px] md:pl-10 "
           >
             contact me{" "}
           </span>{" "}
@@ -83,15 +83,15 @@ const Contact = () => {
       </div>
       {/* contact body */}
       <div
-        className="w-full md:h-[720px] h-[700px] border-black md:border-y-[6px] border-t-[3px] border-l-[3px] md:border-l-0 flex md:flex-row flex-col items-center
+        className="w-full md:h-[720px] h-[700px] border-black dark:border-white1 md:border-y-[6px] border-t-[3px] border-l-[3px] md:border-l-0 flex md:flex-row flex-col items-center
        justify-start relative "
       >
         {/* first columm */}
         <div
-          className="md:w-[35%] md:h-full h-[40%]  md:border-r-[6px] border-r-[3px] w-full border-black flex md:flex-col 
+          className="md:w-[35%] md:h-full h-[40%]  md:border-r-[6px] border-r-[3px] w-full border-black dark:border-white1 flex md:flex-col 
           items-center justify-center font-textFont"
         >
-          <div className="w-full h-[45%] bg-white1 ">
+          <div className="w-full h-[45%] bg-white1 dark:bg-darkMode ">
             <div className="md:p-10 p-5 h-full w-full flex  flex-col  justify-center">
               <p className="flex justify-between font-semibold  ">
                 <span className="font-bold">Adress:</span> Georgia, Rustavi
@@ -107,27 +107,27 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          <div className="md:w-full w-0  md:h-[40%] h-0 bg-blue border-black  md:border-y-[6px]"></div>
+          <div className="md:w-full w-0  md:h-[40%] h-0 bg-blue border-black dark:border-white1  md:border-y-[6px]"></div>
           <div className="md:w-full w-0 md:h-[15%] h-0 flex">
             <div className="w-1/3  bg-yellow h-full"></div>
-            <div className="w-2/3 bg-white1  h-full border-black border-l-[6px]"></div>
+            <div className="w-2/3  h-full border-black dark:border-white1 border-l-[6px]"></div>
           </div>
         </div>
         {/* second columm */}
         <div className="md:w-[50%] w-full md:h-full h-[60%] ">
           <div className="md:w-full w-0 md:h-[15%] h-0">
-            <div className="w-1/3 h-full border-black md:border-r-[6px]  bg-red1"></div>
+            <div className="w-1/3 h-full border-black dark:border-white1 md:border-r-[6px]  bg-red1"></div>
             <div className="w-2/3 h-full"></div>
           </div>
           <div
-            className="w-full md:h-[60%] h-full  bg-white1 border-black md:border-y-[6px]  border-y-[3px]
+            className="w-full md:h-[60%] h-full  bg-white1 dark:bg-darkMode border-black dark:border-white1 md:border-y-[6px]  border-y-[3px]
               md:border-r-[6px] border-r-[3px] md:shadow-lg md:shadow-black relative flex items-end justify-start "
           >
             {/* before send message form */}
             <div
               style={{ animationFillMode: isClikedM ? "forwards" : "none" }}
               className={`md:w-[120px] lg:h-[120px] h-[80px] w-[80px]  bg-yellow absolute bottom-0 right-0
-              border-black md:border-l-[6px] border-l-[3px]  md:border-t-[6px] border-t-[3px] flex items-end justify-end  ${
+              border-black dark:border-white1 md:border-l-[6px] border-l-[3px]  md:border-t-[6px] border-t-[3px] flex items-end justify-end  ${
                 isClikedM ? "animate-increase" : "animate-decrease"
               }`}
             >
@@ -160,7 +160,7 @@ const Contact = () => {
                             errClientName
                               ? "border-red1 focus-visible:border-red1"
                               : "border-black focus-visible:border-black"
-                          } border-2 border-black outline-none bg-white1 w-full md:w-[50%]`}
+                          } border-2 border-black dark:border-white1 outline-none bg-white1 dark:bg-darkMode w-full md:w-[50%]`}
                         />
                         <input
                           onChange={handleEmail}
@@ -171,7 +171,7 @@ const Contact = () => {
                             errEmail
                               ? "border-red1 focus-visible:border-red1"
                               : "border-black focus-visible:border-black"
-                          } border-2 border-black outline-none bg-white1 w-full md:w-[50%]`}
+                          } border-2 border-black dark:border-white1 outline-none bg-white1 dark:bg-darkMode w-full md:w-[50%]`}
                         />
                       </div>
                       <div className="w-full flex flex-col items-start my-1">
@@ -182,12 +182,15 @@ const Contact = () => {
                             errMessages
                               ? "border-red1 focus-visible:border-red1"
                               : "border-black focus-visible:border-black"
-                          } border-2 border-black outline-none font-semibold w-full bg-white1`}
+                          } border-2 border-black dark:border-white1 outline-none font-semibold w-full bg-white1 dark:bg-darkMode`}
                           cols="15"
                           rows="4"
                           placeholder="Your message"
                         ></textarea>
-                        <button onClick={handleSend} className="my-1">
+                        <button
+                          onClick={handleSend}
+                          className="my-1 dark:text-darkMode"
+                        >
                           Send Message
                         </button>
                       </div>
@@ -206,7 +209,7 @@ const Contact = () => {
               />
             </div>
             <h1
-              className={`uppercase lg:text-3xl md:text-2xl text-2xl font-semibold font-textFont lg:p-10 p-5  ${
+              className={`uppercase lg:text-3xl md:text-2xl text-3xl font-semibold font-textFont lg:p-10 p-5  ${
                 isClikedM
                   ? "md:-translate-y-[300px] -translate-y-[325px]  duration-1000"
                   : "animate-textdown"
@@ -216,14 +219,14 @@ const Contact = () => {
             </h1>
           </div>
           <div className="md:w-full w-0 md:h-[25%] h-0">
-            <div className="w-[85%] h-full border-black md:border-r-[6px] bg-red1"></div>
+            <div className="w-[85%] h-full border-black dark:border-white1 md:border-r-[6px] bg-red1"></div>
             <div className="w-[15%] h-full"></div>
           </div>
         </div>
         {/* third columm */}
         <div className="md:w-[20%] w-0 md:h-full h-0">
           <div className="w-full h-[20%]"></div>
-          <div className="w-full h-[40%] bg-white1 border-black md:border-y-[6px]"></div>
+          <div className="w-full h-[40%] bg-white1 dark:bg-darkMode border-black dark:border-white1 md:border-y-[6px]"></div>
           <div className="w-full h-[40%]"></div>
         </div>
       </div>
