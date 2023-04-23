@@ -14,8 +14,8 @@ import {
 } from "react-icons/di";
 import { SiTailwindcss } from "react-icons/si";
 import { BsGit } from "react-icons/bs";
-import { resume } from "../assets";
-
+import resume from "../assets/KakhiMtchedluri.pdf";
+import photo from "../assets/photo.png";
 const About = () => {
   return (
     <div
@@ -129,7 +129,7 @@ const About = () => {
           <div className="w-full h-[60%] bg-red1 border-y-[6px] border-black dark:border-white1">
             <img
               class="max-h-full max-w-full border-black dark:border-white1 lg:border-r-[6px] border-6-[0px] md:border-b-[6px] lg:border-b-[0px]"
-              src="./src/assets/photo.png"
+              src={photo}
               alt="me"
             />
           </div>
