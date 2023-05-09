@@ -3,7 +3,7 @@ import { useState } from "react";
 import { BsArrowUpLeft } from "react-icons/bs";
 
 const Navbar = (props) => {
-  const [isClick, setIsClick] = useState("false");
+  const [isClick, setIsClick] = useState("");
   const [theme, setTheme] = useState("dark");
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {

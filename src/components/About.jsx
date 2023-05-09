@@ -45,13 +45,13 @@ const About = () => {
         {/* second columm */}
         <div className="h-full md:w-[40%] w-full  border-black dark:border-white1 md:border-x-[6px]">
           <div className="md:h-[15%] h-10 flex justify-start items-center px-5 lg:px-10 ">
-            <div className="flex md:flex-col flex-row text-left items-start h-[60%] md:justify-start">
+            <div className="flex md:flex-col flex-row text-left items-center md:items-start h-[60%] md:justify-start">
               {" "}
               <span className="font-bold md:text-[20px] text-[12px]">
                 Hi there!
               </span>
               <div className="flex flex-row justify-start ">
-                <span className="md:font-extrabold font-bold md:text-[14px] text-[12px] text-left ml-3 md:ml-0 flex items-end">
+                <span className="md:font-extrabold font-bold md:text-[14px] text-[12px] text-left ml-3 md:ml-0 flex items-center md:items-end">
                   My name is{" "}
                 </span>
                 <div className=" text-red1 font-extrabold uppercase md:text-[16px] text-[12px cursor-pointer ml-3">

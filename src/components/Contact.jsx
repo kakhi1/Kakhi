@@ -65,7 +65,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="md:w-full md:h-[780px] border-black dark:border-white1 dark:text-white1 md:border-x-[6px] md:border-b-[6px] bg-white1 dark:bg-darkMode "
+      className="md:w-full md:h-[760px] border-black dark:border-white1 dark:text-white1 md:border-x-[6px] md:border-b-[6px] bg-white1 dark:bg-darkMode "
     >
       {/* contact button */}
       <div
@@ -83,7 +83,7 @@ const Contact = () => {
       </div>
       {/* contact body */}
       <div
-        className="w-full md:h-[720px] h-[700px] border-black dark:border-white1 md:border-y-[6px] border-t-[3px] border-l-[3px] md:border-l-0 flex md:flex-row flex-col items-center
+        className="w-full md:h-[700px] h-[700px] border-black dark:border-white1 md:border-y-[6px] border-t-[3px] border-l-[3px] md:border-l-0 flex md:flex-row flex-col items-center
        justify-start relative "
       >
         {/* first columm */}
